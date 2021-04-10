@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import itertools as itt 
 import numpy as np
 
 with open('./log/log.txt','r') as fd:
