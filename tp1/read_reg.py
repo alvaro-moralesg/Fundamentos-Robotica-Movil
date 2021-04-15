@@ -20,4 +20,4 @@ def read_reg(reg_name):
             return t, x, y, o, v, w
     except IOError:
         print('El registro "', reg_name, '" no existe.')
-        return -1, 0, 0, 0
+        return -1, 0, 0, 0, 0, 0
