@@ -3,9 +3,9 @@ import read_reg as rr
 import numpy as np
 
 ## Lectura y carga de registro
-t, x, y, o, v, w = rr.read_reg('./log/mov_circular_z05.txt')
+reg_name = 'mov_circular_3'
+t, x, y, o, v, w = rr.read_reg('./log/'+reg_name+'.txt')
 if (t == -1):
-	print ('Nombre de archivo incorrecto.')
 	exit()
 ##############################
 
@@ -22,7 +22,7 @@ ct[1].plot(t,o, color='r', label='Orientacion')
 ct[1].set(title='Trayectoria')
 plt.legend()
 
-# fig.savefig("./img/mov_circular.png")
+fig.savefig('./img/camino_pose_'+reg_name+'.png')
 #############################
 
 ## Toma 9 puntos del registro

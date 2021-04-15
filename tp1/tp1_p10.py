@@ -5,13 +5,13 @@ import numpy as np
 ## Graficar el sentido de avance 
 def sentido_avance (x, y):   
     tamaño = np.size(x)                                                                                                                     ## Cantidad de puntos en el registro
-    divisiones = int(tamaño/5)                                                                                                              
+    divisiones = int(tamaño/3)                                                                                                              
     arrw_width = (np.max(x) - np.min(x)) * 0.005                                                                                            ## Factor para tamaño de flechas
 
     plt.arrow(x[0]          , y[0]          , x[1]-x[0]                 , y[1]-y[0]                 , width=arrw_width, color='g')          ## Flecha incial Verde
     plt.arrow(x[tamaño-1]   , y[tamaño-1]   , x[tamaño-1]-x[tamaño-2]   , y[tamaño-1]-y[tamaño-2]   , width=arrw_width, color='r')          ## Flecha final Roja
 
-    for i in range(1,5):
+    for i in range(1,3):
         plt.arrow(x[i*divisiones],y[i*divisiones], x[1+i*divisiones]-x[i*divisiones],y[1+i*divisiones]-y[i*divisiones], width=arrw_width, color='k')    ## Flecha negra para el resto de puntos
 ######################################    
 
@@ -33,5 +33,6 @@ while (reg_name != 'q'):
         gr.plot(x, y)
         gr.set(title='Camino de '+reg_name, xlabel='Coord. X', ylabel='Coord. Y')
         sentido_avance(x,y)
+        fig.savefig('./img/sentido_avance_'+reg_name+'.png')
         plt.show()
     ##################################
