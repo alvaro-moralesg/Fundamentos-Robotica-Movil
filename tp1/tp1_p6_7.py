@@ -40,5 +40,6 @@ for i in range (0,9):
 	ct[1].plot(lst_puntos[i][0], lst_puntos[i][1], marker = 'o', color = cycle_color[i])
 	ct[1].plot(lst_puntos[i][0], lst_puntos[i][2], marker = 'o', color = cycle_color[i])
 	ct[1].plot(lst_puntos[i][0], lst_puntos[i][3], marker = 'o', color = cycle_color[i])
+fig.savefig('./img/camino_pose_'+reg_name+'puntos.png')
 plt.show()
 #############################

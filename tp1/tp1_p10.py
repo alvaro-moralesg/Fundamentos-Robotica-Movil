@@ -21,7 +21,7 @@ while (reg_name != 'q'):
     ## Carga de registros
     reg_name= input('Nombre de registro a cargar: ')
     if  reg_name != 'q' :
-        t, x, y, o, v, w = rr.read_reg('./log/' + reg_name + '.txt')
+        t, x, y, o, v, w = rr.read_reg('./log/'+reg_name+'.txt')
     else: 
         break
     ##################################
